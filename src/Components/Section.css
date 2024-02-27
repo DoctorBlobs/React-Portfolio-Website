@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;1,500&display=swap');
+
 * {
     /* background: #fff; */
     box-sizing: border-box;
@@ -12,6 +14,11 @@ video {
     z-index: -1;
 }
 
+/*  //////////////////////////////
+    //                          //
+    //         Contact          //  
+    //                          //
+    ////////////////////////////// */
 
 #contact {
     width: 100vw;
@@ -28,7 +35,7 @@ video {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 4vw;
+    column-gap: 5vw;
     row-gap: 2vh;
 }
 
@@ -37,7 +44,8 @@ video {
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 3vw;
+    max-width: 6.5vh;
+    min-width: 3vh;
     text-decoration: inherit;
     color: inherit;
     font-size: smaller;
@@ -50,14 +58,32 @@ video {
     margin-bottom: 1vh;
 }
 
+
+
+
+/*  //////////////////////////////
+    //                          //
+    //         Cards            //  
+    //                          //
+    ////////////////////////////// */
+
+
+.cardsholder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
     margin-left: 2vh;
     margin-right: 2vh;
-    align-items: center;
-    display: flex;
-    min-width: 250px;
-    width: 17.5%;
     margin-bottom: 2vh;
+    align-items: center;
+
+    max-width: 40vh;
+    min-width: 30vh !important;
+
     transition: transform .2s;
 }
 
@@ -69,6 +95,71 @@ video {
 
 
 
+
+/*  //////////////////////////////
+    //                          //
+    //         Button           //  
+    //                          //
+    ////////////////////////////// */
+
+:root {
+    --primary: #fff;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: none;
+}
+
+.btn--primary {
+    background-color: var(--primary);
+    color: #CDB4DB;
+    border: 1px solid var(--primary);
+}
+
+.btn--outline {
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--small {
+    padding: 4px 14px;
+    font-size: 16px;
+}
+
+.btn--medium {
+    padding: 8px 20px;
+    font-size: 20px;
+}
+
+.btn--large {
+    padding: 12px 26px;
+    font-size: 26px;
+}
+
+.btn--small:hover,
+.btn--large:hover,
+.btn--large:hover {
+    background: #fff;
+    color: #242424;
+    transition: 50ms;
+}
+
+
+
+
+
+/*  //////////////////////////////
+    //                          //
+    //         Navbar           //  
+    //                          //
+    ////////////////////////////// */
 
 .navbar,
 .nav-item,
@@ -82,11 +173,11 @@ video {
 }
 
 .navbar {
+    position: sticky !important;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
     top: 0;
     z-index: 999;
 }
@@ -113,6 +204,10 @@ video {
 .logo {
     height: 75px;
     width: 75px;
+}
+
+.whiteIcon {
+    color: #fff;
 }
 
 .fa-typo3 {
@@ -160,18 +255,23 @@ video {
     display: none;
 }
 
+
+
 @media screen and (max-width: 960px) {
     .NavbarItems {
         position: fixed;
     }
 
     .navbar {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        list-style: none;
+        text-align: center;
     }
 
     .nav-menu {
-        height: 80px;
-        display: contents;
+        display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.2rem;
@@ -179,47 +279,6 @@ video {
         top: 0;
         z-index: 999;
     }
-
-    /* .nav-menu.active {
-        background: #a89a9a;
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-        align-items: end;
-        padding-right: 5%;
-        padding-top: 5%;
-    } */
-
-    .nav-links {
-        color: #fff;
-        text-align: end;
-        width: 50%;
-        display: table;
-    }
-
-    .nav-links:hover {
-        background-color: #fff;
-        color: #242424;
-        border-radius: 0;
-    }
-
-    /* .navbar-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
-    } */
-
-    /* .menu-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.8rem;
-        cursor: pointer;
-    } */
 
     .fa-times {
         color: #fff;
@@ -240,19 +299,49 @@ video {
         border: 1px solid #fff;
         transition: all 0.3s ease-out;
     }
+}
 
-    .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
-        transition: 250ms;
+@media screen and (max-width: 720px) {
+    .NavbarItems {
+        position: fixed;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap !important;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 5px;
+        list-style: none;
+        text-align: center;
+        margin-right: 2rem;
+    }
+
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
     }
 }
 
-.whiteIcon {
-    color: #fff;
-}
 
 
+
+
+
+/*  //////////////////////////////
+    //                          //
+    //     Video Container      //  
+    //                          //
+    ////////////////////////////// */
 
 
 video {
@@ -367,115 +456,13 @@ video {
 
 
 
+/*  //////////////////////////////
+    //                          //
+    //          Text            //  
+    //                          //
+    ////////////////////////////// */
 
-/* .image {
 
-} */
-
-.medialeft{
-    display: flex;
-    align-items: center;
-}
-
-.mediaright {
-    display: flex;
-    align-items: center;
-}
-
-.textvid {
-    width: 50%;
-    height: 50%;
-    align-self: flex-start;
-    backdrop-filter: blur(20px);
-}
-
-.backdrop-blur {
-    height: 50vh;
-    width: 100%;
-    backdrop-filter: blur(20px);
-    margin: 0%;
-    padding: 0%;
-    position: absolute;
-}
-
-.text-video-container {
-    height: 50vh;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-    z-index: 1;
-}
-
-.Blur {
-    height: 100%;
-    width: 100%;
-}
-
-.intro {
-    background-image: linear-gradient(#fff, #fff);
-}
-
-.mediaContainer{
-    background-color: #504e4e;
-    min-height: 75vh;
-    display: flex;
-}
-
-.container-intro {
-    justify-content: flex-end;
-    align-items: center;
-    padding: 200px 300px 200px 100px;
-    display: block;
-    position: relative;
-}
-
-.container-portfolio {
-    justify-content: flex-end;
-    align-items: center;
-    padding: 200px 100px 200px 100px;
-}
-
-.w-container {
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.w-heart-container {
-    display: flex;
-}
-
-.w-about-container {
-    max-width: 940px;
-    margin-left: 45%;
-    margin-right: auto;
-    padding: 5vh 5vh 200px 200px;
-    display: flex;
-}
-
-.aboutgif {
-    float: right;
-    position: static;
-    top: 50px;
-    height: 35vh;
-    width: 35vh;
-    bottom: 0;
-    right: 0;
-    transition: height 0.3s ease-in;
-    transition: width 0.3s ease-in;
-}
-
-.cardsholder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* position: relative; */
-    min-width: 50px;
-}
 
 .text {
     color: #444;
@@ -499,6 +486,152 @@ video {
     line-height: 35px;
 }
 
+
+
+
+
+/*  //////////////////////////////
+    //                          //
+    //       Introduction       //  
+    //                          //
+    ////////////////////////////// */
+
+
+.intro {
+    background-image: linear-gradient(#fff, #fff);
+}
+
+.sideimg {
+    width: 10vh;
+    margin-right: 10vh;
+    float: left;
+}
+
+.lefttext {
+    text-align: right;
+    float: left;
+}
+
+.medialeft{
+    display: flex;
+    align-items: center;
+    margin-left: 15.5vh;
+    margin-right: 1vh;
+    width: 100%;
+}
+
+.mediaright {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.SpotifyPlayer {
+    display: inherit;
+    width: 75%;
+    height: 75%;
+    position: inherit;
+    margin-left: 10vh;
+
+}
+
+.textvid {
+    width: 50%;
+    height: 50%;
+    min-height: 400px;
+    align-self: flex-start;
+    backdrop-filter: blur(20px);
+}
+
+.backdrop-blur {
+    height: 50vh;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+}
+
+.text-video-container {
+    height: 50vh;
+    min-height: 400px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    z-index: 1;
+}
+
+.Blur {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.mediaContainer{
+    background-color: #504e4e;
+    min-height: 75vh;
+    display: flex;
+}
+
+.container-intro {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 200px 300px 200px 100px;
+    display: block;
+    position: relative;
+}
+
+.container-portfolio {
+    justify-content: flex-end;
+    align-items: center;
+    padding: 200px 100px 100px 100px;
+}
+
+.w-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-heart-container {
+    display: flex;
+    min-width: 50%;
+}
+
+.w-about-container {
+    max-width: 940px;
+    margin-left: 45%;
+    margin-right: auto;
+    padding: 5vh 5vh 200px 200px;
+    display: flex;
+}
+
+
+.modaldialouge {
+    width: 80vh;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutgif {
+    float: right;
+    position: static;
+    top: 50px;
+    height: 35vh;
+    width: 35vh;
+    bottom: 0;
+    right: 0;
+    transition: height 0.3s ease-in;
+    transition: width 0.3s ease-in;
+}
+
 .timeline{
     width: 100%;
     height: 100%;
@@ -508,6 +641,13 @@ video {
 .timeline-text{
     text-align: center;
     padding-bottom: 5vh;
+}
+
+.timeline-text-domin{
+    text-align: center;
+    padding-bottom:  5vh;
+    padding-top: 5vh;
+    font-weight: bold;
 }
 
 .w-container-timeline{

@@ -1,6 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route} from 'react-router-dom';
-
+import { HashRouter as Router} from 'react-router-dom';
 import './App.css';
 
 import NavBar from './Components/Navbar';

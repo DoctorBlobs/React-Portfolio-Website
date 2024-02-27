@@ -1,7 +1,8 @@
 import React, { Children } from 'react'
 import { Link } from 'react-router-dom'
 
-import './Button.css';
+import '../App.css'
+import './Section.css';
 
 const STYLES = ['btn--primary', 'btn--outline']
 const SIZES = ['btn--small', 'btn--medium', 'btn--large']

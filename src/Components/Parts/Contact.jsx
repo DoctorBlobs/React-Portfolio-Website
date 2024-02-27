@@ -10,11 +10,13 @@ import el from '../../SourceFiles/Logos/Email.png'
 import '../../App.css';
 import '../Section.css';
 
+
+
 function ContactSection() {
     return(
     <div> 
       <div id="contact">
-        <div>If you want to see more you can find me here:</div>
+        <div>If you want to see more or you'd like to contact me, use the links below:</div>
         <div id="contactlinks">
           <a class="contactlink" href="https://youtube.com/@Doctorblobs">
               <img src={ytl} alt="The Youtube logo" /> 
