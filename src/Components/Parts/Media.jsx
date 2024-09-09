@@ -8,10 +8,13 @@ function MediaSection() {
     <div class="mediaContainer">
       
           <div className='lefttext medialeft'>
-            <h3 class="whiteText">Experienced in making small media projects and playing the guitar! 
-                                  Also a big fan of music and listening to music. 
-                                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            <h3 class="whiteText">I like working on small media projects like songs, video's and games.
+                                  <br></br>
+                                  <br></br>
+                                  Some of my interests include making my own 3D models and animations, playing the guitar, reading science fiction books and freerunning. 
+                                  {/* <br></br>
+                                  <br></br>
+                                  If you have a certain IKEA Shark hand it over. It is mine now. */}
             </h3>
           </div>
 
