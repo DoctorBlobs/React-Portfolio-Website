@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "./static/css/main.cabac126.css",
+    "main.js": "./static/js/main.e0b295cc.js",
+    "static/media/SCF.mp4": "./static/media/SCF.81d8be726ecb28375382.mp4",
+    "static/media/Noodle.gif": "./static/media/Noodle.a5888d39eac90b321699.gif",
+    "static/media/ON.mov": "./static/media/ON.d77c15a8eefc1a60c15c.mov",
+    "static/media/Email.png": "./static/media/Email.411f75754f0c5bc1254f.png",
+    "static/media/Github.png": "./static/media/Github.d2d3013ffae7dd2b5d4d.png",
+    "static/media/Youtube.png": "./static/media/Youtube.0399d698aa1faa2c0ac0.png",
+    "index.html": "./index.html",
+    "main.cabac126.css.map": "./static/css/main.cabac126.css.map",
+    "main.e0b295cc.js.map": "./static/js/main.e0b295cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cabac126.css",
+    "static/js/main.e0b295cc.js"
+  ]
+}
