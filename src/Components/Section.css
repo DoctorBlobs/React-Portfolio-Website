@@ -214,6 +214,12 @@ video {
     font-size: 1.8rem;
 }
 
+.rightimage {
+    height: 100%;
+    transition: height 0.1s ease-in-out;
+    width: 100%;
+}
+
 .nav-menu {
     display: flex;
     grid-template-columns: repeat(4, auto);

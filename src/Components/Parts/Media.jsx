@@ -1,7 +1,11 @@
 import React from 'react';
+
 import { LiteYoutubeEmbed } from 'react-lite-yt-embed';
+
 import '../../App.css';
 import '../Section.css';
+
+import WIP from '../../SourceFiles/WIP.jpg';
 
 function MediaSection() {
     return(
@@ -19,9 +23,11 @@ function MediaSection() {
           </div>
 
           <div className='mediaright'>
-            <div className='YoutubeVideo'>
+            <img className='rightimage' scr={WIP}/>
+            
+            {/* <div className='YoutubeVideo'>
               <LiteYoutubeEmbed playlabel="Example Video"  id={'5KakGqaptPY'}/>
-            </div>
+            </div> */}
             
           </div>
         </div>
